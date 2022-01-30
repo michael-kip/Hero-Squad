@@ -46,6 +46,7 @@ public class HeroTest {
     @Test
     public void newClearRegister(){
         Hero.clearRegister();
+        assertEquals(Hero.heroes().size(),0);
     }
 
 }
