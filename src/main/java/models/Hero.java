@@ -8,15 +8,13 @@ public class Hero {
     private  int mAge;
     private String mPower;
     private String mWeakness;
-    private  int mHeroId;
     private static List<Hero>heroesRegister= new ArrayList<Hero>();
 
-    public Hero(String mName, int mAge, String mPower, String mWeakness, int mHeroId) {
+    public Hero(String mName, int mAge, String mPower, String mWeakness) {
         this.mName = mName;
         this.mAge = mAge;
         this.mPower = mPower;
         this.mWeakness = mWeakness;
-        this.mHeroId = mHeroId;
     }
 
     public String getmName() {
@@ -35,7 +33,5 @@ public class Hero {
         return mWeakness;
     }
 
-    public int getmHeroId() {
-        return mHeroId;
-    }
+
 }
