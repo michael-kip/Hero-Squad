@@ -53,6 +53,14 @@ public class Squad {
         return mIsSquadFull;
     }
 
+    public void addMembers(Hero newHero){
+        if(squadMembers.size()>=3){
+            mIsSquadFull = true;
+        }else {
+            squadMembers.add(newHero);
+        }
+    }
+
     public static List<Squad> getSquads() {
         return squads;
     }
@@ -67,5 +75,9 @@ public class Squad {
 
     public void addMemberToSquad(Hero newHero){
         squadMembers.add(newHero);
+    }
+
+    public static void clearSquads(){
+        squads.clear();
     }
 }

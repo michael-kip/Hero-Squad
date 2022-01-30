@@ -61,4 +61,18 @@ public class SquadTest {
         testSquad.addMemberToSquad(testHero);
         assertTrue(testSquad.ismIsHeroSquadMember(testHero));
     }
+
+    @Test
+    public void addMembersIsSuccessful(){
+        Squad testSquad = new Squad("SpaceZZZ","Secure space", 2);
+        Hero newHero = new Hero("Mf Doom",32,"Space genius","Unpredictable");
+        testSquad.addMemberToSquad(newHero);
+        assertTrue(String.valueOf(testSquad.getSquadMembers().size()),true);
+    }
+
+    @Test
+    public void clearSquadsTrue(){
+        Squad.clearSquads();
+        assertEquals(Squad.getSquads().size(),0);
+    }
 }
