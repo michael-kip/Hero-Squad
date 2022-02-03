@@ -50,5 +50,14 @@ public class App {
             model.put("squad", squad);
             return new ModelAndView(model, "squad_success.hbs");
         }, new HandlebarsTemplateEngine());
+
+
+        get("/heroes/:id", (request, response) -> {
+            Map<String, Object>model= new HashMap<>();
+            int findHeroById = Integer.parseInt(request.params(":id"));
+            Hero hero = Hero.findHero(findHeroById);
+            model.put("foundHero", hero );
+            return new ModelAndView(model, "heroes.hbs");
+        }, new HandlebarsTemplateEngine());
     }
 }

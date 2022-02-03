@@ -1,13 +1,37 @@
-{{#partial "content"}}
-    {{#if hero}}
-        {{#each hero}}
-        <p>{{name}}</p>
-        <p>{{age}}</p>
-        <p>{{power}}</p>
-        <p>{{weakness}}</p>
+]{{#partial "content"}}
 
-    {{else}}
-         <p class="empty">no hero!</p>
-    {{/each}}
-{{/partial}}
-{{> layouts.hbs}}
+ {{/partial}}
+
+         {{#partial "details"}}
+             <div class="cards__item card" id="hero-detail">
+                 <div class="card-body">
+                     <div class="d-flex">
+                         <h5>Hero name</h5>
+                         <p class="p-2">{{post.name}}</p>
+                     </div>
+                     <div class="d-flex">
+                         <h5>Powers</h5>
+                         <p class="p-2">{{post.age}}</p>
+                     </div>
+                     <div class="d-flex">
+                         <h5>Age</h5>
+                         <p class="p-2">{{post.power}}</p>
+                     </div>
+                     <div class="d-flex">
+                         <h5>Weakness</h5>
+                         <p class="p-2">{{post.weakness}}</p>
+                     </div>
+                 </div>
+{{!--   --}}
+{{!--                  <a href="/heroes/{{post.id}}/update">Edit this hero</a> --}}
+{{!--                  <a class="btn btn-danger" href="/heroes/{{post.id}}/delete">DELETE this post </a> --}}
+{{!--                  </p> --}}
+
+{{!--          <footer class="footer content-wrapper"> --}}
+{{!--              <div class="container"> --}}
+{{!--                  <p class="text-muted"><a class="btn btn-warning" href="/heroes/delete">DELETE YOUR HEROES</a></p> --}}
+{{!--              </div> --}}
+     </div>
+ {{/partial}}
+
+ {{> layout.hbs}}
