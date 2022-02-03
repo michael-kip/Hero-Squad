@@ -1,0 +1,25 @@
+{{#partial "content"}}
+    <form action="/heroes" method = "put">
+        <div class="form-group">
+            <label for="hero">Hero name:</label>
+            <input id="hero" name="hero" class="form-control" type="text">
+        </div>
+
+        <div class="form-group">
+             <label for="age">Hero age:</label>
+             <input id="age" name="age" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+             <label for="power">Hero power:</label>
+             <input id="power" name="power" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+             <label for="weakness">Hero weakness:</label>
+             <input id="hero" name="hero" class="form-control" type="text">
+        </div>
+        <button type="submit">Add</button>
+
+    </form>
+{{/partial}}
+
+{{> layout.hbs}}

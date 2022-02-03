@@ -50,14 +50,14 @@ public class SquadTest {
     @Test
     public void addMembersToSquadCorrectly(){
         Squad testSquad = new Squad("Computer Ninjas", "Stop computer illiteracy",3);
-        Hero testHero = new Hero("Batman", 365, "Super-fly","Smoking" );
+        Hero testHero = new Hero("Batman", "365", "Super-fly","Smoking" );
         testSquad.addMemberToSquad(testHero);
         assertTrue(testSquad.getSquadMembers().contains(testHero));
     }
     @Test
     public void isSquadMemberDuplicate(){
         Squad testSquad = new Squad("Computer Ninjas", "Stop computer illiteracy",3);
-        Hero testHero = new Hero("Batman", 365, "Super-fly","Smoking" );
+        Hero testHero = new Hero("Batman", "365", "Super-fly","Smoking" );
         testSquad.addMemberToSquad(testHero);
         assertTrue(testSquad.ismIsHeroSquadMember(testHero));
     }
@@ -65,7 +65,7 @@ public class SquadTest {
     @Test
     public void addMembersIsSuccessful(){
         Squad testSquad = new Squad("SpaceZZZ","Secure space", 2);
-        Hero newHero = new Hero("Mf Doom",32,"Space genius","Unpredictable");
+        Hero newHero = new Hero("Mf Doom","32","Space genius","Unpredictable");
         testSquad.addMemberToSquad(newHero);
         assertTrue(String.valueOf(testSquad.getSquadMembers().size()),true);
     }

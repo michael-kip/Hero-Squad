@@ -5,13 +5,13 @@ import java.util.List;
 
 public class Hero {
     private  String mName;
-    private  int mAge;
+    private String mAge;
     private String mPower;
     private String mWeakness;
     private int mHeroId;
     private static List<Hero>heroesRegister= new ArrayList<Hero>();
 
-    public Hero(String mName, int mAge, String mPower, String mWeakness) {
+    public Hero(String mName, String mAge, String mPower, String mWeakness) {
         this.mName = mName;
         this.mAge = mAge;
         this.mPower = mPower;
@@ -20,11 +20,12 @@ public class Hero {
         mHeroId = heroesRegister.size();
     }
 
+
     public String getmName() {
         return mName;
     }
 
-    public int getmAge() {
+    public String getmAge() {
         return mAge;
     }
 

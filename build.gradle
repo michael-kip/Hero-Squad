@@ -4,7 +4,7 @@ plugins {
 }
 
 mainClassName = "App"
-applicationName = "hero-squad"
+applicationName = "Hero-Squad"
 group 'com.moringa.herosquad'
 version '1.0-SNAPSHOT'
 
