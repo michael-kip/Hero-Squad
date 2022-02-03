@@ -1,4 +1,5 @@
 import models.Hero;
+import models.Squad;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
@@ -35,6 +36,19 @@ public class App {
             Hero hero = new Hero(name, age, power,weakness);
             model.put("hero", hero);
             return new ModelAndView(model, "heroes.hbs");
+        }, new HandlebarsTemplateEngine());
+        get("/squad",(request, response) -> {
+            Map<String,Object> model = new HashMap<>();
+            return new ModelAndView(model,"squad_form.hbs");
+        },new HandlebarsTemplateEngine());
+        post("/squad/new", (request, response) -> {
+            Map<String,Object>model= new HashMap<>();
+            String name = request.queryParams("name");
+            String cause = request.queryParams("cause");
+            int size = Integer.parseInt(request.queryParams("size"));
+            Squad squad = new Squad(name,cause,size);
+            model.put("squad", squad);
+            return new ModelAndView(model, "squad_success.hbs");
         }, new HandlebarsTemplateEngine());
     }
 }
