@@ -1,25 +1,89 @@
 {{#partial "content"}}
-    <form action="/heroes" method = "put">
-        <div class="form-group">
-            <label for="hero">Hero name:</label>
-            <input id="hero" name="hero" class="form-control" type="text">
-        </div>
+{{!--     {{#if editHero}} --}}
+{{!--         <div class="card"> --}}
+{{!--             <h1>Update hero!</h1> --}}
 
-        <div class="form-group">
-             <label for="age">Hero age:</label>
-             <input id="age" name="age" class="form-control" type="text">
-        </div>
-        <div class="form-group">
-             <label for="power">Hero power:</label>
-             <input id="power" name="power" class="form-control" type="text">
-        </div>
-        <div class="form-group">
-             <label for="weakness">Hero weakness:</label>
-             <input id="hero" name="hero" class="form-control" type="text">
-        </div>
-        <button type="submit">Add</button>
+{{!--             <form action="/heroes/{{hero.id}}/update" method="post"> --}}
+{{!--                 <div class="mb-3"> --}}
+{{!--                     <label for="name">Hero name</label> --}}
+{{!--                     <input class="form-control" id="name" value="{{ero.name}}" name="name" type="text" required> --}}
+{{!--                 </div> --}}
 
-    </form>
+{{!--                 <div class="mb-3"> --}}
+{{!--                     <label for="specialPower">Hero power</label> --}}
+{{!--                     <input class="form-control" id="specialPower" value="{{hero.specialPower}}" name="specialPower" type="text" placeholder="eg. time travel" required> --}}
+{{!--                 </div> --}}
+
+{{!--                 <div class="mb-3"> --}}
+{{!--                     <label for="weakness">Hero weakness</label> --}}
+{{!--                     <input class="form-control"value="{{hero.weakness}}"  id="weakness" name="weakness" type="text" placeholder="eg. fire" required> --}}
+{{!--                 </div> --}}
+
+{{!--                 <div class="md-3"> --}}
+{{!--                     <label for="age">Hero Age</label> --}}
+{{!--                     <input class="form-control" id="age"value="{{hero.age}}" name="age" type="number" required> --}}
+{{!--                 </div> --}}
+{{!--                 <button type="submit" class="btn btn-secondary">Go!</button> --}}
+{{!--             </form> --}}
+{{!--         </div> --}}
+
+{{!--     {{else}} --}}
+      <div class="card">
+          <h2>Add a new Hero!</h2>
+
+          <form action="/heroes/new" method="post">
+              <div class="mb-3">
+                  <label for="name">Hero name</label>
+                  <input class="form-control" id="name" name="name" type="text" required>
+              </div>
+
+              <div class="mb-3">
+                  <label for="specialPower">Hero power</label>
+                  <input class="form-control" id="specialPower" name="specialPower" type="text" placeholder="eg. time travel" required>
+              </div>
+
+              <div class="mb-3">
+                  <label for="weakness">Hero weakness</label>
+                  <input class="form-control" id="weakness" name="weakness" type="text" placeholder="eg. fire" required>
+              </div>
+
+              <div class="md-3">
+                  <label for="age">Hero Age</label>
+                  <input class="form-control" id="age" name="age" type="number" required>
+              </div>
+              <button type="submit" class="btn btn-secondary">Go!</button>
+          </form>
+      </div>
+{{!--     {{/if}} --}}
+
 {{/partial}}
 
+
+
 {{> layout.hbs}}
+
+{{!-- {{#partial "content"}} --}}
+{{!--     <form action="/heroes" method = "put"> --}}
+{{!--         <div class="form-group"> --}}
+{{!--             <label for="hero">Hero name:</label> --}}
+{{!--             <input id="hero" name="hero" class="form-control" type="text"> --}}
+{{!--         </div> --}}
+
+{{!--         <div class="form-group"> --}}
+{{!--              <label for="age">Hero age:</label> --}}
+{{!--              <input id="age" name="age" class="form-control" type="text"> --}}
+{{!--         </div> --}}
+{{!--         <div class="form-group"> --}}
+{{!--              <label for="power">Hero power:</label> --}}
+{{!--              <input id="power" name="power" class="form-control" type="text"> --}}
+{{!--         </div> --}}
+{{!--         <div class="form-group"> --}}
+{{!--              <label for="weakness">Hero weakness:</label> --}}
+{{!--              <input id="hero" name="hero" class="form-control" type="text"> --}}
+{{!--         </div> --}}
+{{!--         <button type="submit">Add</button> --}}
+
+{{!--     </form> --}}
+{{!-- {{/partial}} --}}
+
+{{!-- {{> layout.hbs}} --}}

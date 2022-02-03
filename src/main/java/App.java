@@ -22,7 +22,7 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
 
-        get("/hero-form", (request, response) -> {
+        get("/hero-form/new", (request, response) -> {
             Map<String, Object>model=new HashMap<>();
             return new ModelAndView(model, "hero-form.hbs");
         }, new HandlebarsTemplateEngine());
