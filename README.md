@@ -15,7 +15,7 @@ https://michael-kip.github.io/
 ## Installation / Setup instruction
 
 - open terminal
-- git clone `https://michael-kip/ceaser_pi
+- git clone `https://michael-kip/Hero-Squad
 - cd caesar-cipher
 - idea . depending on the text editor of choice.
 
