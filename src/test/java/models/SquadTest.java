@@ -7,68 +7,68 @@ import static org.junit.Assert.*;
 public class SquadTest {
     @Test
     public void heroInstantiatesCorrectly(){
-        Squad testSquad = new Squad("Computer Ninjas","Stop computer illiteracy", 3);
+        Squad testSquad = new Squad("Computer Ninjas",3, "Stop computer illiteracy");
         assertEquals(true, testSquad instanceof Squad );
     }
     @Test
     public void squadNameInstantiatesCorrectly(){
-        Squad testSquad = new Squad("Computer Ninjas", "Stop computer illiteracy",3);
-        assertEquals("Computer Ninjas", testSquad.getmSquadName());
+        Squad testSquad = new Squad("Computer Ninjas", 3,"Stop computer illiteracy");
+        assertEquals("Computer Ninjas", testSquad.getName());
     }
     @Test
     public void squadSizeInstantiatesCorrectly(){
-        Squad testSquad = new Squad("Computer Ninjas", "Stop computer illiteracy",3);
-        assertEquals(3, testSquad.getmSize());
+        Squad testSquad = new Squad("Computer Ninjas", 3,"Stop computer illiteracy");
+        assertEquals(3, testSquad.getSize());
     }
     @Test
     public void squadCauseInstantiatesCorrectly(){
-        Squad testSquad = new Squad("Computer Ninjas", "Stop computer illiteracy",3);
-        assertEquals("Stop computer illiteracy", testSquad.getmCause());
+        Squad testSquad = new Squad("Computer Ninjas", 3,"Stop computer illiteracy");
+        assertEquals("Stop computer illiteracy", testSquad.getCause());
     }
     @Test
     public void squadIdInstantiatesCorrectly(){
-        Squad testSquad = new Squad("Computer Ninjas", "Stop computer illiteracy",3);
-        assertEquals(1, testSquad.getmSquadId());
+        Squad testSquad = new Squad("Computer Ninjas", 3,"Stop computer illiteracy");
+        assertEquals(1, testSquad.getId());
     }
     @Test
     public void squadsReturnsAllInstancesCorrectly(){
-        Squad squadOne = new Squad("Computer Ninjas", "Stop computer illiteracy",3);
-        Squad squadTwo = new Squad("Net Ninjas", "Find people who don't practice code",3);
+        Squad squadOne = new Squad("Computer Ninjas", 3,"Stop computer illiteracy");
+        Squad squadTwo = new Squad("Net Ninjas", 3,"Find people who don't practice code");
         assertEquals(true, Squad.getSquads().contains(squadOne));
         assertEquals(true, Squad.getSquads().contains(squadTwo));
     }
     @Test
     public void findSquadWithSameId(){
-        Squad testSquad = new Squad("Computer Ninjas", "Stop computer illiteracy",3);
-        assertEquals(Squad.findSquads(testSquad.getmSquadId()), testSquad);
+        Squad testSquad = new Squad("Computer Ninjas", 3,"Stop computer illiteracy");
+        assertEquals(Squad.find(testSquad.getId()), testSquad);
     }
-    @Test
-    public void getSquadsReturnsEmptyList(){
-        Squad testSquad = new Squad("Computer Ninjas", "Stop computer illiteracy",3);
-        assertEquals(0, testSquad.getSquadMembers().size());
-    }
+//    @Test
+//    public void getSquadsReturnsEmptyList(){
+//        Squad testSquad = new Squad("Computer Ninjas", 3,"Stop computer illiteracy");
+//        assertEquals(0, testSquad.getSquadMembers().size());
+//    }
     @Test
     public void addMembersToSquadCorrectly(){
-        Squad testSquad = new Squad("Computer Ninjas", "Stop computer illiteracy",3);
-        Hero testHero = new Hero("Batman", "365", "Super-fly","Smoking" );
-        testSquad.addMemberToSquad(testHero);
-        assertTrue(testSquad.getSquadMembers().contains(testHero));
+        Squad testSquad = new Squad("Computer Ninjas", 3,"Stop computer illiteracy");
+        Hero testHero = new Hero("Batman", 365, "Super-fly","Smoking", 2 );
+        testSquad.addHero(testHero);
+        assertTrue(testSquad.getHeroes().contains(testHero));
     }
-    @Test
-    public void isSquadMemberDuplicate(){
-        Squad testSquad = new Squad("Computer Ninjas", "Stop computer illiteracy",3);
-        Hero testHero = new Hero("Batman", "365", "Super-fly","Smoking" );
-        testSquad.addMemberToSquad(testHero);
-        assertTrue(testSquad.ismIsHeroSquadMember(testHero));
-    }
+//    @Test
+//    public void isSquadMemberDuplicate(){
+//        Squad testSquad = new Squad("Computer Ninjas", 3,"Stop computer illiteracy");
+//        Hero testHero = new Hero("Batman", 365, "Super-fly","Smoking", 2 );
+//        testSquad.addHero(testHero);
+//        assertTrue(testSquad.(testHero));
+//    }
 
-    @Test
-    public void addMembersIsSuccessful(){
-        Squad testSquad = new Squad("SpaceZZZ","Secure space", 2);
-        Hero newHero = new Hero("Mf Doom","32","Space genius","Unpredictable");
-        testSquad.addMemberToSquad(newHero);
-        assertTrue(String.valueOf(testSquad.getSquadMembers().size()),true);
-    }
+//    @Test
+//    public void addMembersIsSuccessful(){
+//        Squad testSquad = new Squad("SpaceZZZ",2, "Secure space");
+//        Hero newHero = new Hero("Mf Doom",32,"Space genius","Unpredictable", 1);
+//        testSquad.addHero(newHero);
+//        assertTrue(String.valueOf(testSquad.getSquadMembers().size()),true);
+//    }
 
     @Test
     public void clearSquadsTrue(){

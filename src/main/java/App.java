@@ -66,7 +66,7 @@ public class App {
             Squad squad = Squad.find(Integer.parseInt(request.params(":id")));
             model.put("squad", squad);
             model.put("heroes-in-squad",squad.getHeroes());
-            return new ModelAndView(model, "/squadDetails.hbs");
+            return new ModelAndView(model, "/squads.hbs");
         }, new HandlebarsTemplateEngine());
         get("heroes/new", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
