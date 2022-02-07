@@ -4,53 +4,55 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Hero {
-    private  String mName;
-    private String mAge;
-    private String mPower;
-    private String mWeakness;
-    private int mHeroId;
-    private static List<Hero>heroesRegister= new ArrayList<Hero>();
+    private String name;
+    private int age;
+    private String power;
+    private String weakness;
+    private int id;
+    private int squadId;
+    private static List<Hero> minstances =  new ArrayList<Hero>();
 
-    public Hero(String mName, String mAge, String mPower, String mWeakness) {
-        this.mName = mName;
-        this.mAge = mAge;
-        this.mPower = mPower;
-        this.mWeakness = mWeakness;
-        heroesRegister.add(this);
-        mHeroId = heroesRegister.size();
+//   public Hero(String superman, int i, String sniffing, String love) {
+//    }
+
+    public int getAge() {
+        return age;
     }
 
-
-    public String getmName() {
-        return mName;
+    public String getName() {
+        return name;
     }
 
-    public String getmAge() {
-        return mAge;
+    public String getPower() {
+        return power;
     }
 
-    public String getmPower() {
-
-        return mPower;
+    public String getWeakness() {
+        return weakness;
+    }
+    public static Hero findHero(int n) {
+        return minstances.get(n-1);
+    }
+    public Hero(String name, int age, String power, String weakness, int squadId) {
+        this.name = name;
+        this.age = age;
+        this.power = power;
+        this.weakness = weakness;
+        this.squadId = squadId;
+        minstances.add(this);
+        this.id = minstances.size();
     }
 
-    public String getmWeakness() {
-
-        return mWeakness;
+    public int getId() {
+        return id;
     }
-    public int getmHeroId(){
-
-        return mHeroId;
+    public int getSquadId() {
+        return squadId;
     }
-    public static Hero findHero(int id){
-
-        return heroesRegister.get(id-1);
+    public static List<Hero> getAll() {
+        return minstances;
     }
-    public static List<Hero> heroes(){
-
-        return heroesRegister;
-    }
-    public static void clearRegister(){
-        heroesRegister.clear();
+    public static void clearAllHeroes() {
+        minstances.clear();
     }
 }

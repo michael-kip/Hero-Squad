@@ -1,15 +1,38 @@
-{{#partial "content"}}
 
-    <div class="card">
-        <h2 class="card-title">Hero list!    </h2>
-        {{#if heroes}}
-            {{#each heroes }}
-                <p>{{name}}  <a href="/heroes/{{id}}">details</a></p>
-            {{/each}}
-        {{else}}
-            <p class="alert alert-warning text-center">No heroes found!</p> <br> <a class="mt-2 text-center hover-1" href="/posts/new">  Create hero here</a>
-        {{/if}}
+{{#partial "title"}}
+
+{{/partial}}
+
+{{#partial  "content"}}
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link text-danger" href="/">Home <span class="sr-only">heroes</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="/squads/new"> squad</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="/heroes/new">hero</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="card bg text-center">
+        <h2 class="card-title  text-center " id="success" >Welcome!!</h2>
+        <hr>
+        <p class="card-text text-center"> Create Heroes and add them to Squads of you just created!</p>
+        <a href="/squads/new"   ><button  type="button" class="btn btn-secondary mt-4 ">create squad!</button></a>
+        <a href="/heroes/new"  ><button  type="button" class="btn btn-secondary mt-5">create hero</button></a>
+        <br>
     </div>
+
 {{/partial}}
 
 {{> layout.hbs}}
+

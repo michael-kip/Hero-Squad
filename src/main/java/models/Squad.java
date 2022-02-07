@@ -4,80 +4,59 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Squad {
-    private  String mSquadName;
-    private int mSize;
-    private  String mCause;
-    private  int mSquadId;
-    private  static boolean mIsHeroSquadMember = false;
-    private boolean mIsSquadFull = false;
-    private static List<Squad>squads=new ArrayList<>();
-    private List<Hero>squadMembers = new ArrayList<Hero>();
+    private String name;
+    private int size;
+    private String cause;
+    private int id;
+    private static ArrayList<Squad> instances = new ArrayList<Squad>();
+    private List<Hero> heroes = new ArrayList<Hero>();
 
-    public Squad(String mSquadName, String mCause, int mSize) {
-        this.mSquadName = mSquadName;
-        this.mCause = mCause;
-        this.mSize = mSize;
-        squads.add(this);
-        mSquadId = squads.size();
+    public Squad(String name, int size, String cause) {
+        this.name = name;
+        this.size = size;
+        this.cause = cause;
+        instances.add(this);
+        this.id = instances.size();
     }
 
-    public String getmSquadName() {
-        return mSquadName;
+    public String getName() {
+        return name;
     }
 
-    public int getmSize() {
-        return mSize;
+    public int getSize() {
+        return size;
     }
 
-    public String getmCause() {
-        return mCause;
+    public String getCause() {
+        return cause;
     }
 
-    public int getmSquadId() {
-        return mSquadId;
+    public int getId() {
+        return id;
     }
 
-    public static boolean ismIsHeroSquadMember(Hero newHero) {
-        boolean isDuplicate = false;
-        for (Squad newSquad: squads){
-            for (Hero anotherHero: newSquad.getSquadMembers()){
-                if (newHero.getmName().equals(newHero.getmName())){
-                    isDuplicate = true;
-                }
-            }
-        }
-        return isDuplicate;
+    public List<Hero> getHeroes() {
+        return heroes;
     }
-
-    public boolean ismIsSquadFull() {
-        return mIsSquadFull;
-    }
-
-    public void addMembers(Hero newHero){
-        if(squadMembers.size()>=3){
-            mIsSquadFull = true;
-        }else {
-            squadMembers.add(newHero);
+    public void addHero(Hero hero) {
+        if (heroes.size()<this.getSize()) {
+            heroes.add(hero);
         }
     }
 
-    public static List<Squad> getSquads() {
-        return squads;
+    public static ArrayList<Squad> getSquads() {
+        return instances;
     }
-
-    public List<Hero> getSquadMembers() {
-        return squadMembers;
+    public static void clearSquads() {
+        instances.clear();
     }
-
-    public static Squad findSquads(int searchId){
-        return squads.get(searchId - 1);
+    public void removeHeroes() {
+        heroes.clear();
     }
-
-    public void addMemberToSquad(Hero newHero){
-        squadMembers.add(newHero);
+    public void removeHero(Hero hero) {
+        heroes.remove(hero);
     }
-
-    public static void clearSquads(){
-        squads.clear();
+    public static Squad find(int n) {
+        return instances.get(n-1);
     }
 }
