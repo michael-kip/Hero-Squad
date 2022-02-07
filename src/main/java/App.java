@@ -34,7 +34,7 @@ public class App {
 
         get("/squads/new",(request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
-            return new ModelAndView(model, "/SquadCreation.hbs");
+            return new ModelAndView(model, "/squad_success.hbs");
         }, new HandlebarsTemplateEngine());
 
         ;
