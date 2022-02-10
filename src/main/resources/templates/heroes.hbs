@@ -1,37 +1,40 @@
-]{{#partial "content"}}
+{{#partial "content"}}
+    {{#if heroes}}
+        <ul>
+            {{#each heroes}}
+                <li class="card col-lg-6">
+                    <h3 class="card-title" id="hero">Name:{{name}}</h3>
+                    <!--  <a href="/heroes/{{Id}}" class="btn btn-outline-dark btn-lg">Details</a>-->
+                    <a href="/squads/{{squadId}}" class="btn btn-outline-dark btn-lg">View squad</a>
+                </li>
+                <br><br>
 
- {{/partial}}
+            {{/each}}
+        </ul>
 
-         {{#partial "details"}}
-             <div class="cards__item card" id="hero-detail">
-                 <div class="card-body">
-                     <div class="d-flex">
-                         <h5>Hero name</h5>
-                         <p class="p-2">{{post.name}}</p>
-                     </div>
-                     <div class="d-flex">
-                         <h5>Powers</h5>
-                         <p class="p-2">{{post.age}}</p>
-                     </div>
-                     <div class="d-flex">
-                         <h5>Age</h5>
-                         <p class="p-2">{{post.power}}</p>
-                     </div>
-                     <div class="d-flex">
-                         <h5>Weakness</h5>
-                         <p class="p-2">{{post.weakness}}</p>
-                     </div>
-                 </div>
+    {{else}}
+        <div class="card col-lg-8">
+            <p class="card-text" id="squad" style="font-size: 22px">no heroes here yet</p>
+        </div>
+        <br><br>
+    {{/if}}
+    <a href="/heroes/new" class="btn btn-outline-dark btn-lg col-md-5">Create heroes</a>
 
-                 <a href="/heroes/{{post.id}}/update">Edit this hero</a>
-                 <a class="btn btn-danger" href="/heroes/{{post.id}}/delete">DELETE this post </a>
-                 </p>
+{{/partial}}
 
-         <footer class="footer content-wrapper">
-             <div class="container">
-                 <p class="text-muted"><a class="btn btn-warning" href="/heroes/delete">DELETE YOUR HEROES</a></p>
-             </div>
-     </div>
- {{/partial}}
+{{> layout.hbs}}
 
- {{> layout.hbs}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,24 +1,38 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class Squad {
     private String name;
     private int size;
-    private String cause;
-    private int id;
-    private static ArrayList<Squad> instances = new ArrayList<Squad>();
-    private List<Hero> heroes = new ArrayList<Hero>();
+    private  String cause;
+    private static List<Squad>squads = new ArrayList<>();
+    private  int id;
+    private List<Hero>heroes ;
+
 
     public Squad(String name, int size, String cause) {
         this.name = name;
         this.size = size;
         this.cause = cause;
-        instances.add(this);
-        this.id = instances.size();
+        squads.add(this);
+        this.id = squads.size();
+        this.heroes= new ArrayList<>();
     }
 
+    public static List<Squad> getAll() {
+        return squads;
+    }
+    public static Squad findById(int id){
+        if (id ==0){
+            return squads.get(id+1) ;
+        }else{
+            return squads.get(id-1);
+        }
+
+    }
     public String getName() {
         return name;
     }
@@ -31,32 +45,14 @@ public class Squad {
         return cause;
     }
 
-    public int getId() {
-        return id;
-    }
-
     public List<Hero> getHeroes() {
         return heroes;
     }
-    public void addHero(Hero hero) {
-        if (heroes.size()<this.getSize()) {
-            heroes.add(hero);
-        }
-    }
 
-    public static ArrayList<Squad> getSquads() {
-        return instances;
+    public int getId() {
+        return  id;
     }
-    public static void clearSquads() {
-        instances.clear();
-    }
-    public void removeHeroes() {
-        heroes.clear();
-    }
-    public void removeHero(Hero hero) {
-        heroes.remove(hero);
-    }
-    public static Squad find(int n) {
-        return instances.get(n-1);
+    public  void addHeroToSquad(Hero newHero){
+        heroes.add(newHero);
     }
 }
