@@ -50,21 +50,6 @@
 //        testSquad.addHero(testHero);
 //        assertTrue(testSquad.getHeroes().contains(testHero));
 //    }
-////    @Test
-////    public void isSquadMemberDuplicate(){
-////        Squad testSquad = new Squad("Computer Ninjas", 3,"Stop computer illiteracy");
-////        Hero testHero = new Hero("Batman", 365, "Super-fly","Smoking", 2 );
-////        testSquad.addHero(testHero);
-////        assertTrue(testSquad.(testHero));
-////    }
-//
-////    @Test
-////    public void addMembersIsSuccessful(){
-////        Squad testSquad = new Squad("SpaceZZZ",2, "Secure space");
-////        Hero newHero = new Hero("Mf Doom",32,"Space genius","Unpredictable", 1);
-////        testSquad.addHero(newHero);
-////        assertTrue(String.valueOf(testSquad.getSquadMembers().size()),true);
-////    }
 //
 //    @Test
 //    public void clearSquadsTrue(){
