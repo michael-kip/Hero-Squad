@@ -37,12 +37,12 @@ public class App {
         post("/squads", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             List<Squad> squads = request.session().attribute("squads");
-            if(squads == null) {//if exists
+            if(squads == null) {
                 squads = new ArrayList<>();
                 request.session().attribute("squads", squads);
             }
 
-            String name = request.queryParams("name");//fetching the value from the user generated data
+            String name = request.queryParams("name");
             int size = Integer.parseInt(request.queryParams("size"));
             String cause = request.queryParams("cause");
 
@@ -72,7 +72,7 @@ public class App {
 
         get("/heroes/new", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
-            model.put("squads",Squad.getAll());
+//            model.put("squads",Squad.getAll());
             return new ModelAndView(model, "hero-form.hbs");
         }, new HandlebarsTemplateEngine());
 

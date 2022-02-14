@@ -1,7 +1,10 @@
 html, body{
     background-color: white;
     background-position: centre;
-    color: black;
+    color: white;
+    background-image: url("/images/hero1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 body:after {
   content: '';
