@@ -34,15 +34,6 @@
 ehthumbs.db
 Thumbs.db
 
-# Java and Gradle #
-############
-build/
-
-out/
-out
-
-
-
 # IntelliJ #
 ############
 .idea
