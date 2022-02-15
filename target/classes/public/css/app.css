@@ -1,0 +1,115 @@
+html, body{
+    background-color: white;
+    background-position: centre;
+    color: white;
+    background-image: url("/images/hero1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.card
+body:after {
+  content: '';
+  display: flex;
+  clear: both;
+}
+.hero-text {
+    font-family: 'Wide awake', sans-serif;
+    color: #ffff;
+}
+
+navbar {
+    font-family: 'Wide awake Black', sans-serif;
+        color: #ffff;
+        font-size: 18px;
+}
+.nav-link{
+    position: center;
+}
+}
+
+
+.content-wrapper {
+    margin-top: 10vh;
+}
+.card{
+    background-color: #041b2d91;
+    padding: 10px;
+    box-shadow: 6px 2px 7px 0px rgba(0,0,0,0.53);
+}
+.card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+}
+.navbar a {
+    color: #492059;
+}
+a:hover{
+    color: #004E9A;
+}
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    padding: 30px;
+}
+.cards {
+    font-family: 'Wide awake Black', sans-serif;
+    color: #ffff;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.img-hover-zoom {
+  height: 150px;
+}
+.img-hover-zoom img {
+  transition: transform .5s, filter 1.5s ease-in-out;
+    filter: grayscale(100%);
+}
+
+.img-hover-zoom:hover img {
+  filter: grayscale(0);
+    transform: scale(1.05) translateY(-2%);
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 90%;
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+  line-height: 24px;
+}
+a:before, a:after {
+  content: '';
+  position: absolute;
+  transition: transform .5s ease;
+}
+.hover-1 {
+  padding-top: 10px;
+}
+.hover-1:before {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #492059;
+  transform: scaleX(0);
+}
+.hover-1:hover:before {
+  transform: scaleX(1);
+}
+
+#hero-detail {
+  color: #ffff;
