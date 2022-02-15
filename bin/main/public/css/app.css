@@ -27,16 +27,16 @@ navbar {
 .nav-link{
     position: center;
 }
-}
+
 
 
 .content-wrapper {
     margin-top: 10vh;
 }
 .card{
-    background-color: #041b2d91;
+    background-color: #8e918f;
     padding: 10px;
-    box-shadow: 6px 2px 7px 0px rgba(0,0,0,0.53);
+    opacity: 0.4;
 }
 .card {
         margin: 0 auto; /* Added */
