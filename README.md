@@ -10,7 +10,7 @@ A java program which enable users to play play a game of heroes by selecting the
 
 ## Live Page
 
-https://michael-kip.github.io/
+https://michael-squad-hero.herokuapp.com/
 
 ## Installation / Setup instruction
 
