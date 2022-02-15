@@ -24,13 +24,14 @@
                 <div class="input-group-prepend">
                     <label for="squadId" class="input-group-text"> Squad: </label>
                 </div>
-                <select class="custom-select" id="squadId" name="squadId" required>
+                <select class="custom-select" id="squadId" name="squadId">
                     {{#each squads}}
                         <option value="{{id}}">{{name}}</option>
                     {{/each}}
                 </select>
             </div>
-            <button type="submit" class="btn btn-outline-dark btn-lg mt-4">Add Hero</button>
+            <br>
+            <button type="submit" class="btn btn-secondary"> Create Hero</button>
         </form>
     </div>
 

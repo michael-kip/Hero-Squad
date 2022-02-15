@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.moringa.deployment</groupId>
+    <groupId>com.moringa.herosquad</groupId>
     <artifactId>michael-squad-hero</artifactId>
     <version>1.0</version>
 
@@ -82,7 +82,7 @@
                 <configuration>
                     <jdkVersion>1.8</jdkVersion>
                     <!-- Change this to YOUR application name! -->
-                    <appName>michael-hero-squad</appName>
+                    <appName>michael-squad-hero</appName>
                     <processTypes>
                         <web>java $JAVA_OPTS -cp target/classes:target/dependency/* App</web>
                     </processTypes>
